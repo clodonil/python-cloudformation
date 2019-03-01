@@ -158,7 +158,7 @@ with open('cloudformation.yaml', 'w') as f:
 Todos os recursos que você pode utilizar:
 
 |||Opções de Recusos||
-|:--|:--:|:--:|--:|
+|:--|:--|:--|:--|
 |AWS::AmazonMQ|AWS::ApiGateway|AWS::ApiGatewayV2|AWS::CloudWatch|
 |AWS::Athena|AWS::AutoScaling|AWS::AutoScalingPlans|AWS::KinesisAnalyticsV2   |
 |AWS::Cloud9|AWS::CloudFormation|AWS::CloudFront|AWS::CloudTrail|
