@@ -158,21 +158,23 @@ with open('cloudformation.yaml', 'w') as f:
 Todos os recursos que você pode utilizar:
 
 |||Opções de Recusos||||
-|-------------|---------------|-----------------|--------------|------------|---------------------------|
-|AWS::AmazonMQ|AWS::ApiGateway|AWS::ApiGatewayV2|AWS::AppStream|AWS::AppSync|AWS::ApplicationAutoScaling|
-|AWS::Athena|AWS::AutoScaling|AWS::AutoScalingPlans|AWS::Batch|AWS::Budgets|AWS::CertificateManager|
-|AWS::Cloud9|AWS::CloudFormation|AWS::CloudFront|AWS::CloudTrail|AWS::CloudWatch|AWS::CodeBuild|
-|AWS::CodeCommit|AWS::CodeDeploy|AWS::CodePipeline|AWS::Cognito|AWS::Config|AWS::DAX|
-|AWS::DLM|AWS::DMS|AWS::DataPipeline|AWS::DirectoryService|AWS::DocDB|AWS::DynamoDB|
-|AWS::EC2|AWS::ECR|AWS::ECS|AWS::EFS|AWS::EKS|AWS::EMR|
-|AWS::ElastiCache|AWS::ElasticBeanstalk|AWS::ElasticLoadBalancing|AWS::ElasticLoadBalancingV2|AWS::Elasticsearch|AWS::Events|
-|AWS::FSx|AWS::Glue|AWS::GuardDuty|AWS::IAM|AWS::Inspector|AWS::IoT|
-|AWS::IoT1Click|AWS::IoTAnalytics|AWS::KMS|AWS::Kinesis|AWS::KinesisAnalytics|AWS::KinesisAnalyticsV2|
-|AWS::KinesisFirehose|AWS::Lambda|AWS::Logs|AWS::Neptune|AWS::OpsWorks|AWS::OpsWorksCM|
-|AWS::RDS|AWS::Redshift|AWS::Route53|AWS::Route53Resolver|AWS::S3|AWS::SDB|
-|AWS::SES|AWS::SNS|AWS::SQS|AWS::SSM|AWS::SageMaker|AWS::SecretsManager|
-|AWS::Serverless|AWS::ServiceCatalog|AWS::ServiceDiscovery|AWS::StepFunctions|AWS::WAF|AWS::WAFRegional|
-|AWS::WorkSpaces|  | | | |
+|-------------|---------------|-----------------|--------------|------------|
+|AWS::AmazonMQ|AWS::ApiGateway|AWS::ApiGatewayV2|AWS::AppStream|AWS::AppSync|
+|AWS::Athena|AWS::AutoScaling|AWS::AutoScalingPlans|AWS::Batch|AWS::Budgets|
+|AWS::Cloud9|AWS::CloudFormation|AWS::CloudFront|AWS::CloudTrail|AWS::CloudWatch|
+|AWS::CodeCommit|AWS::CodeDeploy|AWS::CodePipeline|AWS::Cognito|AWS::Config|
+|AWS::DLM|AWS::DMS|AWS::DataPipeline|AWS::DirectoryService|AWS::DocDB|
+|AWS::EC2|AWS::ECR|AWS::ECS|AWS::EFS|
+|AWS::ElastiCache|AWS::ElasticBeanstalk|AWS::ElasticLoadBalancing|AWS::ElasticLoadBalancingV2AWS::Elasticsearch|
+|AWS::FSx|AWS::Glue|AWS::GuardDuty|AWS::IAM|AWS::Inspector|
+|AWS::IoT1Click|AWS::IoTAnalytics|AWS::KMS|AWS::Kinesis|AWS::KinesisAnalytics|
+|AWS::KinesisFirehose|AWS::Lambda|AWS::Logs|AWS::Neptune|AWS::OpsWorks|
+|AWS::RDS|AWS::Redshift|AWS::Route53|AWS::Route53Resolver|AWS::S3|
+|AWS::SES|AWS::SNS|AWS::SQS|AWS::SSM|AWS::SageMaker|
+|AWS::Serverless|AWS::ServiceCatalog|AWS::ServiceDiscovery|AWS::StepFunctions|AWS::WAF|
+|AWS::WorkSpaces|AWS::ApplicationAutoScaling  |AWS::CertificateManager |AWS::CodeBuild |AWS::DAX |
+|AWS::DynamoDB|AWS::EKS|AWS::EMR|AWS::Events|AWS::IoT|AWS::KinesisAnalyticsV2|
+|AWS::SecretsManager|AWS::WAFRegional|AWS::OpsWorksCM|AWS::SDB||
 
 
 # Broto
