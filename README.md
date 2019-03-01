@@ -157,24 +157,26 @@ with open('cloudformation.yaml', 'w') as f:
 
 Todos os recursos que você pode utilizar:
 
-|||Opções de Recusos|||
-|:--|:--:|:--:|:--:|--:|
-|AWS::AmazonMQ|AWS::ApiGateway|AWS::ApiGatewayV2|AWS::AppStream|AWS::AppSync|
-|AWS::Athena|AWS::AutoScaling|AWS::AutoScalingPlans|AWS::Batch|AWS::Budgets|
-|AWS::Cloud9|AWS::CloudFormation|AWS::CloudFront|AWS::CloudTrail|AWS::CloudWatch|
-|AWS::CodeCommit|AWS::CodeDeploy|AWS::CodePipeline|AWS::Cognito|AWS::Config|
-|AWS::DLM|AWS::DMS|AWS::DataPipeline|AWS::DirectoryService|AWS::DocDB|
+|||Opções de Recusos||
+|:--|:--:|:--:|--:|
+|AWS::AmazonMQ|AWS::ApiGateway|AWS::ApiGatewayV2|
+|AWS::Athena|AWS::AutoScaling|AWS::AutoScalingPlans|
+|AWS::Cloud9|AWS::CloudFormation|AWS::CloudFront|AWS::CloudTrail|
+|AWS::CodeCommit|AWS::CodeDeploy|AWS::CodePipeline|AWS::Cognito|
+|AWS::DLM|AWS::DMS|AWS::DataPipeline|AWS::DirectoryService|
 |AWS::EC2|AWS::ECR|AWS::ECS|AWS::EFS|
 |AWS::ElastiCache|AWS::ElasticBeanstalk|AWS::ElasticLoadBalancing|AWS::ElasticLoadBalancingV2|
-|AWS::FSx|AWS::Glue|AWS::GuardDuty|AWS::IAM|AWS::Inspector|
-|AWS::IoT1Click|AWS::IoTAnalytics|AWS::KMS|AWS::Kinesis|AWS::KinesisAnalytics|
-|AWS::KinesisFirehose|AWS::Lambda|AWS::Logs|AWS::Neptune|AWS::OpsWorks|
-|AWS::RDS|AWS::Redshift|AWS::Route53|AWS::Route53Resolver|AWS::S3|
-|AWS::SES|AWS::SNS|AWS::SQS|AWS::SSM|AWS::SageMaker|
-|AWS::Serverless|AWS::ServiceCatalog|AWS::ServiceDiscovery|AWS::StepFunctions|AWS::WAF|
-|AWS::WorkSpaces|AWS::ApplicationAutoScaling  |AWS::CertificateManager |AWS::CodeBuild |AWS::DAX |
-|AWS::DynamoDB|AWS::EKS|AWS::EMR|AWS::Events|AWS::IoT|AWS::KinesisAnalyticsV2|
+|AWS::FSx|AWS::Glue|AWS::GuardDuty|AWS::IAM|
+|AWS::IoT1Click|AWS::IoTAnalytics|AWS::KMS|AWS::Kinesis|
+|AWS::KinesisFirehose|AWS::Lambda|AWS::Logs|AWS::Neptune|
+|AWS::RDS|AWS::Redshift|AWS::Route53|AWS::Route53Resolver|
+|AWS::SES|AWS::SNS|AWS::SQS|AWS::SSM|
+|AWS::Serverless|AWS::ServiceCatalog|AWS::ServiceDiscovery|AWS::StepFunctions|
+|AWS::WorkSpaces|AWS::ApplicationAutoScaling  |AWS::CertificateManager |AWS::CodeBuild |
+|AWS::DynamoDB|AWS::EKS|AWS::EMR|AWS::Events|AWS::IoT|
 |AWS::SecretsManager|AWS::WAFRegional|AWS::OpsWorksCM|AWS::SDB|AWS::Elasticsearch|
-
-
+|AWS::AppStream|AWS::AppSync |AWS::Batch|AWS::Budgets | 
+|AWS::Config |AWS::DocDB |AWS::Inspector |AWS::S3 |
+|AWS::KinesisAnalytics|AWS::OpsWorks |AWS::WAF | AWS::DAX |
+|AWS::SageMaker | AWS::KinesisAnalyticsV2 |AWS::CloudWatch  |  |
 # Broto
