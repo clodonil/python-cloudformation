@@ -1,0 +1,30 @@
+Description: Exemplo de utilizacao do ecr
+Parameters:
+  ProjetoName:
+    AllowedPattern: '[a-zA-Z][a-zA-Z0-9]*'
+    ConstraintDescription: Letra e numero
+    Description: Nome do Projeto
+    MaxLength: '16'
+    MinLength: '1'
+    NoEcho: true
+    Type: String
+Resources:
+  MyRepository:
+    Properties:
+      RepositoryName: test-repository
+      RepositoryPolicyText:
+        Statement:
+          - Action:
+              - ecr:GetDownloadUrlForLayer
+              - ecr:BatchGetImage
+              - ecr:BatchCheckLayerAvailability
+              - ecr:PutImage
+              - ecr:InitiateLayerUpload
+              - ecr:UploadLayerPart
+              - ecr:CompleteLayerUpload
+            Effect: Allow
+            Principal:
+              AWS: '*'
+            Sid: AllowPushPull
+        Version: '2008-10-17'
+    Type: AWS::ECR::Repository
