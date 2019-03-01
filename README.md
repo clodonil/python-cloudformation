@@ -7,7 +7,9 @@ Assim devemos tornar cada item da infraestrutura um elemento descrito por uma li
 
 Dessa forma temos a nossa infraestrutura sendo desenvolvida de forma rápida, eficiente, confiável e segura. Outras vantagens como sua infraestrutura pode ser portável, reutilizável e compartilhável e facilmente testável.
 
-A infraestrutura como código é uma prática importante a ser adotada se você quiser implementar o DevOps na sua organização. Além disso, ela permitirá que o seu time economize o tempo gasto com falhas e tarefas repetitivas e possa investi-lo em novos projetos para o aprimoramento dos produtos e serviços. Assim, você poderá tornar a sua organização de TI mais responsiva, colaborativa, mais rápida e, finalmente, mais inovadora.
+A infraestrutura como código é uma prática importante a ser adotada se você quiser implementar o DevOps na sua organização. Além disso, ela permitirá que o seu time economize o tempo gasto com falhas e tarefas repetitivas e possa investi-lo em novos projetos para o aprimoramento dos produtos e serviços. 
+
+Assim, você poderá tornar a sua organização de TI mais responsiva, colaborativa, mais rápida e, finalmente, mais inovadora.
 
 Para realizar esse "sonho", temos duas soluções possíveis.
 
@@ -34,18 +36,19 @@ Para começarmos a explorar, vamos instalar o `Troposphere`.
 pip install troposphere
 ```
 
- 
+Vamos começar pelo exemplo mais simples possível em uma infraestrutura, que é a criação de um novo servidor. Para ficar claro, vamos utilizar a seguinte dinâmica:
 
-###Exemplo de utilização
+1. Criar o código em Python;
+2. Gerar o CloudFormation;
+3. Criar um stack de CloudFormation na AWS;
+4. Monitorar a execução.
 
-Vamos começar com um exemplo, bastante simples.
+Como pré-requisito para executar os exemplos a seguir é ter uma conta na AWS.
 
 Vamos provisionar uma máquina no EC2:
 
 ```python
-
 # Importa as libs
-
 from troposphere import Ref, Template
 import troposphere.ec2 as ec2
 
@@ -67,6 +70,8 @@ print(t.to_json())
 print(t.to_yaml())
 
 ```
+
+
 
  
 
@@ -153,6 +158,7 @@ with open('cloudformation.yaml', 'w') as f:
 Todos os recursos que você pode utilizar:
 
 |AWS::AmazonMQ|AWS::ApiGateway|AWS::ApiGatewayV2|AWS::AppStream|AWS::AppSync|AWS::ApplicationAutoScaling|
+|-------------|---------------|-----------------|--------------|------------|---------------------------|
 |AWS::Athena|AWS::AutoScaling|AWS::AutoScalingPlans|AWS::Batch|AWS::Budgets|AWS::CertificateManager|
 |AWS::Cloud9|AWS::CloudFormation|AWS::CloudFront|AWS::CloudTrail|AWS::CloudWatch|AWS::CodeBuild|
 |AWS::CodeCommit|AWS::CodeDeploy|AWS::CodePipeline|AWS::Cognito|AWS::Config|AWS::DAX|
