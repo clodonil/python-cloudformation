@@ -1,0 +1,17 @@
+Description: utilizando parametro com o nome do servidor
+Parameters:
+  ServerName:
+    AllowedPattern: '[a-zA-Z][a-zA-Z0-9]*'
+    ConstraintDescription: "Pode conter apenas letras e n\xFAmeros."
+    Default: server1
+    Description: Digite o nome do servidor
+    MaxLength: '16'
+    MinLength: '1'
+    NoEcho: true
+    Type: String
+Resources:
+  server1:
+    Properties:
+      ImageId: ami-951945d0
+      InstanceType: t1.micro
+    Type: AWS::EC2::Instance

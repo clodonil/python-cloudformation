@@ -122,84 +122,74 @@ Se olhamos as instâncias podemos ver que foi criado o `server1` e o mesmo já e
 
 ![ec2-exemplo-run](img/img2.png)
 
-
-O ideal é sempre parametrizar a receita do cloudformation para pode ser utilizado para vários propósitos.
+Uma boa prática é sempre parametrizar a receita do cloudformation para pode ser utilizado para vários propósitos.
 
 Um exemplo de utilização de parâmetros:
-
- 
 
 ```python
 
 # Importando as libs
-
 from troposphere import Parameter, Ref, Template
-
-from troposphere.rds import DBInstance, DBParameterGroup
-
- 
+import troposphere.ec2 as ec2
 
 # Cria um template
-
 t = Template()
 
- 
-
 # Criando uma descricao para template
+t.add_description("utilizando parametro com o nome do servidor")
 
-t.add_description(
-
-    "AWS CloudFormation Sample Template RDS_with_DBParameterGroup: Sample "
-
-    "template showing how to create an Amazon RDS Database Instance with "
-
-    "a DBParameterGroup.**WARNING** This template creates an Amazon "
-
-    "Relational Database Service database instance. You will be billed for "
-
-    "the AWS resources used if you create a stack from this template.")
-
- 
-
-param1 = t.add_parameter(Parameter(
-
+servername = t.add_parameter(Parameter(
     "ServerName",
-
     NoEcho=True,
-
     Description="Digite o nome do servidor",
-
     Type="String",
-
     MinLength="1",
-
     MaxLength="16",
-
     AllowedPattern="[a-zA-Z][a-zA-Z0-9]*",
-
+    Default = "server1",
     ConstraintDescription=("Pode conter apenas letras e números.")
-
 ))
 
- 
+instance = ec2.Instance("server1")
+# Define o tipo da imagem
+instance.ImageId = "ami-951945d0"
+# Define o tamanho da maquina
+instance.InstanceType = "t1.micro"
 
+ # Adiciona a instancia no recurso
+t.add_resource(instance)
+
+# Gera o cloudformation no formato json
 print(t.to_json())
 
+# Gera o cloudformation no formato yaml
+print(t.to_yaml())
+
+# Salva o arquivo exemplo_ecs.yaml no formato do cloudformation
+with open('exemplo_params_ec2.yaml', 'w') as f:
+    f.write(t.to_yaml())```
+
+Segue o arquivo `YAML` criado pelo programa acima:
+
+```yaml
+Description: utilizando parametro com o nome do servidor
+Parameters:
+  ServerName:
+    AllowedPattern: '[a-zA-Z][a-zA-Z0-9]*'
+    ConstraintDescription: "Pode conter apenas letras e n\xFAmeros."
+    Default: server1
+    Description: Digite o nome do servidor
+    MaxLength: '16'
+    MinLength: '1'
+    NoEcho: true
+    Type: String
+Resources:
+  server1:
+    Properties:
+      ImageId: ami-951945d0
+      InstanceType: t1.micro
+    Type: AWS::EC2::Instance
 ```
-
-Para salvar o cloudformation em um arquivo yaml, pode ser feito dessa forma:
-
- 
-
-```python
-
-with open('cloudformation.yaml', 'w') as f:
-
-    f.write(t.to_yaml())
-
-```
-
- 
 
 Todos os recursos que você pode utilizar:
 
