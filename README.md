@@ -165,7 +165,7 @@ Todos os recursos que você pode utilizar:
 |AWS::CodeCommit|AWS::CodeDeploy|AWS::CodePipeline|AWS::Cognito|AWS::Config|
 |AWS::DLM|AWS::DMS|AWS::DataPipeline|AWS::DirectoryService|AWS::DocDB|
 |AWS::EC2|AWS::ECR|AWS::ECS|AWS::EFS|
-|AWS::ElastiCache|AWS::ElasticBeanstalk|AWS::ElasticLoadBalancing|AWS::ElasticLoadBalancingV2AWS::Elasticsearch|
+|AWS::ElastiCache|AWS::ElasticBeanstalk|AWS::ElasticLoadBalancing|AWS::ElasticLoadBalancingV2|
 |AWS::FSx|AWS::Glue|AWS::GuardDuty|AWS::IAM|AWS::Inspector|
 |AWS::IoT1Click|AWS::IoTAnalytics|AWS::KMS|AWS::Kinesis|AWS::KinesisAnalytics|
 |AWS::KinesisFirehose|AWS::Lambda|AWS::Logs|AWS::Neptune|AWS::OpsWorks|
@@ -174,7 +174,7 @@ Todos os recursos que você pode utilizar:
 |AWS::Serverless|AWS::ServiceCatalog|AWS::ServiceDiscovery|AWS::StepFunctions|AWS::WAF|
 |AWS::WorkSpaces|AWS::ApplicationAutoScaling  |AWS::CertificateManager |AWS::CodeBuild |AWS::DAX |
 |AWS::DynamoDB|AWS::EKS|AWS::EMR|AWS::Events|AWS::IoT|AWS::KinesisAnalyticsV2|
-|AWS::SecretsManager|AWS::WAFRegional|AWS::OpsWorksCM|AWS::SDB||
+|AWS::SecretsManager|AWS::WAFRegional|AWS::OpsWorksCM|AWS::SDB|AWS::Elasticsearch|
 
 
 # Broto
