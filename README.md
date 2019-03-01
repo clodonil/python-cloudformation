@@ -45,7 +45,7 @@ Vamos começar pelo exemplo mais simples possível em uma infraestrutura, que é
 
 Como pré-requisito para executar os exemplos a seguir é ter uma conta na AWS.
 
-Vamos provisionar uma máquina no EC2:
+Vamos provisionar uma máquina no EC2, a explicação de cada linha coloquei no código.
 
 ```python
 # Importa as libs
@@ -56,8 +56,11 @@ import troposphere.ec2 as ec2
 t = Template()
 
 # Cria uma instancia
+# Define o nome da instancia
 instance = ec2.Instance("server1")
+# Define o tipo da imagem
 instance.ImageId = "ami-951945d0"
+# Define o tamanho da maquina
 instance.InstanceType = "t1.micro"
 
  # Adiciona a instancia no recurso
@@ -69,15 +72,58 @@ print(t.to_json())
 # Gera o cloudformation no formato yaml
 print(t.to_yaml())
 
+# Salva o arquivo exemplo_ecs.yaml no formato do cloudformation
+with open('exemplo_ec2.yaml', 'w') as f:
+    f.write(t.to_yaml())
 ```
 
+Ao executar o programa acima, o arquivo `JSON` no formato do cloudformation é gerado e impresso na tela.
 
+```json
+{
+    "Resources": {
+        "server1": {
+            "Properties": {
+                "ImageId": "ami-951945d0",
+                "InstanceType": "t1.micro"
+            },
+            "Type": "AWS::EC2::Instance"
+        }
+    }
+}
+```
 
+também o modelo no formato `YAML`.
+
+```yaml
+Resources:
+  server1:
+    Properties:
+      ImageId: ami-951945d0
+      InstanceType: t1.micro
+    Type: AWS::EC2::Instance
+```
+
+E a ultimas linhas do programa, salva o formato do `yaml` dentro do arquivo `exemplo_ecs2.yaml`.
+
+Vamos utilizar esse arquivo para criar um `stack` na AWS com esse CloudFormation.
+
+Podemos fazer isso utilizando o seguinte comando:
+
+```bash
+aws cloudformation create-stack --stack-name ec2-exemplo --template-body file://exemplo_ec2.yaml
+```
  
+A figura 1, mostra a `stack` criada e o CloudFormation executado com sucesso.
+
+![ec2-exemplo](img/img1.png)
+
+Se olhamos as instâncias podemos ver que foi criado o `server1` e o mesmo já esta em execução:
+
+![ec2-exemplo-run](img/img2.png)
+
 
 O ideal é sempre parametrizar a receita do cloudformation para pode ser utilizado para vários propósitos.
-
- 
 
 Um exemplo de utilização de parâmetros:
 
